@@ -10,24 +10,22 @@ XSLT transformation to both HTML and PDF applied on a XML file with football lea
 
 This is also my very first XSLT transformation to both HTML and PDF from 2016 and published now.
 
-## The structure
+## Input
 
-Quality check
-I have integrated Codebeat and Codacy cloud static analysis services to check the overall code quality out of curiosity.
-
-### Input
-
-#### XML file
+### XML file
 
 The only input is the XML file.
 
-### Transformation
+## Transformation
 
-### Ouptut
+## Ouptut
 
-#### HTML
+### HTML
 
-#### PDF
+### PDF
+
+## Quality check
+I have integrated Codebeat and Codacy cloud static analysis services to check the overall code quality out of curiosity.
 
 ## Licence
 
