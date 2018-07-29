@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xml:lang="cs">
+	<info>
+		<title>Popis fotbalové ligy</title>
+		<subtitle>Dokumentace k závěrečné práci předmětu 4IZ238</subtitle>		
+		<author>
+			<personname><firstname>Nikolas</firstname><surname>Charalambidis</surname></personname>
+			<affiliation>
+				<orgname>VŠE, FIS</orgname>
+				<address><email>chan01@vse.cz</email></address>
+			</affiliation>
+		</author>
+		<copyright>
+			<year>2016</year>
+			<holder>Nikolas Charalambidis</holder>
+		</copyright>
+	</info>
+	<preface>
+		<title>Úvod</title>
+		<para>Předmětem této dokumentace je popis závěrečné práce pro předmět 4IZ238 (XML - Teorie a praxe značkovacích jazyků). Práce se skládá ze tří povinných částí.</para>
+		<para>První část je složena ze schématu validující XML dokument, přičemž schéma musí obsahovat minimálně 25 různých elementů a atributů. Schéma může být zapsáno ve formě XSD dokumentu nebo v RelaxNG a zárověň musí patřit do libovolného jmenného prostoru. Dále tato část obsahuje validní XML dokument s minimálně 200 řádakmi. </para>
+		<para>Druhá část obsahuje dva XSL styly. První převádí XML dokument do HTML dokumentu a druhý do PDF dokumentu. Podmínka splnění je použití složitějších konstrukcí.</para>
+		<para>Poslední, třetí částí je tato dokumentace, kterou je třeba dělat pomocí DocBooku.</para>
+	</preface>
+	<chapter>
+		<title>Zadání</title>
+		<para>Jako podklad pro semestrální práci jsem si vybral svá vytvořená data (1000+ záznamů) v ostříhané podobě již použitá pro kurzy 4IT110 (Užití MS Excelu v podnikové praxi) a následně pro 4IT218 (Databáze).</para>
+		<para>Cílem práce je zpracování seznamu 12 fiktivních fotbalových týmů v rámci jedné ligové soutěže, včetně všech jejich hráčů, statistik a detailního popisu. Výsledkem je jedna hlavní stránka s představením ligové soutěže a jednotlivých týmů s odkazy stránky na ně, kde jsou uvedeny informace o týmu, spočteny výkonové ukazatele dle aktuální strategie sestavy a dle hráčů, kteří jsou také představeni.</para>
+	</chapter>
+	<chapter>
+		<title>Schéma</title>
+		<para>V úvodu bylo řečeno, že jedna z podmínek hodnocení je 25 různých elementů a atributů. Níže je popsán seznam jednotlivých prvků a také jejich význam.</para>
+		<itemizedlist>
+			<listitem>
+				<para>
+					<tag>league</tag> - Kořenový element, který je vrcholem stromové interpretace dokumentu.
+				</para>
+				<itemizedlist>
+					<listitem>
+						<para>
+							<tag>detail</tag> - Obsahuje informace o soutěži
+						</para>
+						<itemizedlist>
+							<listitem><para><tag>name</tag> - Jméno ligy</para></listitem>
+							<listitem>
+								<para><tag>director</tag> - Informace o řediteli ligy</para>
+								<itemizedlist>
+									<listitem><para><tag>name</tag> - Jméno a příjmení ředitele ligy</para></listitem>
+									<listitem><para><tag>nationality</tag> - Národnost ředitele ligy</para></listitem>
+									<listitem>
+										<para><tag>contact</tag> - Kontaktní údaje ředitele ligy</para>
+										<itemizedlist>
+											<listitem><para><tag>email</tag> - Pracovní e-mail ředitele ligy</para></listitem>
+											<listitem><para><tag>phone</tag> - Telefoní číslo ředitele ligy</para></listitem>
+										</itemizedlist>
+									</listitem>
+								</itemizedlist>
+							</listitem>
+							<listitem><para><tag>season</tag> - Aktuální sezóna ligy</para></listitem>
+							<listitem><para><tag>start</tag> - Datum zahájení sezóny</para></listitem>
+							<listitem><para><tag>end</tag> - Datum ukončení sezóny</para></listitem>
+						</itemizedlist>
+					</listitem>
+					<listitem>
+						<para>
+							<tag>teams</tag> - Obsahuje popis jednotlivých týmů, registrovaných v soutěži
+						</para>
+						<itemizedlist>
+							<listitem>
+								<para><tag>team</tag> - Element reprezentující samostatný tým. Atribut <tag>@id</tag> obsahuje unikátní číselné označení týmu.</para>
+								<itemizedlist>
+									<listitem>
+										<para><tag>description</tag> - Obsahuje informace o týmu</para>
+										<itemizedlist>
+											<listitem><para><tag>name</tag> - Jméno týmu</para></listitem>
+											<listitem><para><tag>short</tag> - Zkrácené jméno týmu</para></listitem>
+											<listitem>
+												<para><tag>trainer</tag> - Obsahuje informace o trenérovi týmu</para>
+												<itemizedlist>
+													<listitem><para><tag>name</tag> - Jméno a příjmení trenéra týmu</para></listitem>
+													<listitem><para><tag>nationality</tag> - Národnost trenéra týmu</para></listitem>
+													<listitem><para><tag>licence</tag> - Licence trenéra týmu</para></listitem>
+													<listitem>
+														<para><tag>contact</tag> - Kontaktní údaje trenéra týmu</para>
+														<itemizedlist>
+															<listitem><para><tag>email</tag> - Pracovní e-mail trenéra týmu</para></listitem>
+															<listitem><para><tag>phone</tag> - Telefoní číslo trenéra týmu</para></listitem>
+														</itemizedlist>
+													</listitem>
+												</itemizedlist>
+											</listitem>
+											<listitem><para><tag>stadium</tag> - Jméno domovského stadionu týmu</para></listitem>
+										</itemizedlist>
+									</listitem>
+									<listitem>
+										<para><tag>players</tag> - Seznam hráčů týmu</para>
+										<itemizedlist>
+											<listitem>
+												<para><tag>player</tag> - Element reprezentující samostatného hráče. Atribut <tag>@position</tag> obsahuje název pozice, kterou hráč obsazuje a atribut <tag>@status</tag> definuje kapitána týmu.</para>
+												<itemizedlist>
+													<listitem><para><tag>name</tag> - Jméno a příjmení hráče</para></listitem>
+													<listitem><para><tag>nationality</tag> - Národnost hráče</para></listitem>
+													<listitem><para><tag>skill</tag> - Total skill index hráče, představující kvantitativní souhrn všech jeho dovedností nezávisle na věku, zdravotním a psychickém stavu. Atribut <tag>@special</tag> obsahuje speciální zaměření hráče.</para></listitem>
+													<listitem><para><tag>age</tag> - Věk hráče</para></listitem>
+												</itemizedlist>
+											</listitem>
+										</itemizedlist>
+									</listitem>
+								</itemizedlist>
+							</listitem>
+						</itemizedlist>
+					</listitem>
+				</itemizedlist>
+			</listitem>
+		</itemizedlist>
+	</chapter>	
+	<chapter>
+		<title>XSL - konverze do HTML</title>
+		<para>Nedílnou součástí práce je i soubor <tag>index.xsl</tag>, který má nastarosti transformaci XML souboru do validního HTML souboru.</para>
+		<para></para>
+		<section>
+			<title>Transformace</title>
+			<para>Samotná transformace je rozdělena do několika částí, připomínající stromovou strukturu.</para>
+			<para>První část je ta nejdůležitější, protože je kořenem celé transformace. Vytváří hlavní soubor <tag>index.html</tag>, který slouží jako rozcestník a hlavní stránka. Dále v první části jsou oodkazy na volání jednotlivých šablon dle jména nebo značky.</para>
+			<para>Další část volá šablonu vypisující detaily o lize. Pod ní je šablona pro jednotlivé týmy, které se zapíší do tabulek a rovnou vygenerují jako odkazy na jednotlivé stránky těchto týmů v samostatných šablonách.</para>
+			<para>Poslední část vytváří dva samostatné dokumenty, sloužící jako další stránky na stejné úrovni s jiným seznamem.</para>
+		</section>
+		<section>
+			<title>Soubory</title>
+			<para>Níže je popsána hierarchie vygenerovaných souborů.</para>
+			<itemizedlist>
+				<listitem><para><tag>index.html</tag> - Vlastní kořenový HTML soubor</para></listitem>
+				<listitem><para><tag>best-players.html</tag> - HTML soubor, obsahující seznam nejlepších hráčů dle jejich pozic</para></listitem>
+				<listitem><para><tag>top-11.html</tag> - HTML soubor, obsahující seznam nejlepších 11 hráčů, které tvoří reprezantaci ligy</para></listitem>
+				<listitem>
+					<para><tag>chunks</tag> - Adresář, obsahující jednotlivé HTML soubory představující jednotlivé týmy</para>
+					<itemizedlist>
+						<listitem><para><tag>xxx.html</tag> - HTML soubor, představující tým. Za písmena <tag>xx</tag> se dosadí název týmu, který je zároveň název souboru.</para></listitem>
+						<listitem><para><tag>yyy.html</tag> - ...</para></listitem>
+						<listitem><para><tag>zzz.html</tag> - ...</para></listitem>
+					</itemizedlist>
+				</listitem>
+			</itemizedlist>
+		</section>
+		<section>
+			<title>Problémy</title>
+			<para>Jediným problémem během transformace bylo zaručení správného zobrazení speciálních písmen, jako je například ve jméně <tag>Uông Bửu Đích</tag>. oXygen používá defaultně Apache FOP, nicméně nezná TTF font, který je schopný toto písmo zpracovat. Proto se musí spustit transformace jiným způsobem při úpravě konfiguračního souboru <tag>fop.xconf</tag>. Nicméně toto se mi nepovedlo.</para>
+		</section>
+	</chapter>
+	<chapter>
+		<title>XSL-FO - konverze do PDF</title>
+		<para>Další dílnou součástí práce je soubor <tag>index-fo.xsl</tag>, který má nastarosti transformaci XML souboru do validního PDF souboru.</para>
+		<section>
+			<title>Transformace</title>
+			<para>Dokument pro převod do PDF se skládá ze 4 šablon, které na sebe navazují.</para>
+			<para>První šablona je volaná pro kořenový element a obsahuje několik bloků, které definují záhlaví a zápatí, rozložení stránek a dále seznam, respektive obsah týmů a generaci jednotlivých stránek patřící výhradně jim.</para>
+			<para>Druhá šablona generuje obsah jednotlivých stránek představující týmy. V této stránce nalezneme informace o týmu, seznam jednotlivých hráčů a týmových výkonových ukazatelů.</para>
+			<para>Třetí šablona definuje jednotlivé informace o lize.</para>
+			<para>A poslední šablona obsahuje watermark pro každou stránku v podobě obrázku.</para>
+		</section>
+		<section>
+			<title>Soubory</title>
+			<para>Byl vygenerován jediný komplexní soubor <tag>idnex.pdf</tag> v kořenovém adresáři.</para>
+		</section>
+		<section>
+			<title>Problémy</title>
+			<para>Při transformaci do PDF souboru nenastaly žádné problémy.</para>
+		</section>
+	</chapter>
+	<chapter>
+		<title>Závěr</title>
+		<para>Závěr bych věnoval shrnutí semestrální práce a její přínos.</para>
+		<para>V případě uveřejnění by práce mohla sloužit jako ukázka možností řešení jednotlivých problematik, nicméně jsem si vědom nedostatků.</para>
+		<para>Musím uznat, že semestrální práce mi poskytla cennou praktickou zkušenost s XML a transformací, což je obrovská výhoda, oproti ostatním kurzům tady na škole. De facto k sestavení semestrální práce je třeba účast na cvičeních a eventuální samostudium.</para>
+		<para>Materiálů je opravdu hodně a jsou velmi dobře popsány a i komplexní, tedy zahrnují téměř všechny metody transformací. Na druhou stranu v tom vidím jistou nevýhodu, protože materiály a příklady jsou natolik obsáhlé, že se v nich začátečník snadno ztratí, obzvláště student, který nemá ani zkušenosti se sestavováním HTML stránek. V tomto případě by hodně pomohla baby-edice tutoriálu, respektive popsání jen toho nejpodstatnějšího na nejjednodušších příkadech s cílenými popisky.</para>
+		<para>Podle mého není možné probrat všechny základní techniky schémat a transformací v rámci jediného kurzu. Obsáhlost kurzu je taková, že se student snadno ztratí.</para>
+		<para>Celkově ale beru kurz jako velice přínosný, na jehož cvičení jsem se opravdu těšil, a který rád využiju v budoucnu.</para>
+	</chapter>
+</book>

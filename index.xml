@@ -1,0 +1,1031 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- <?xml-stylesheet href="index.css" type="text/css"?> -->
+
+<league xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+		  xmlns="https://nichar.com"
+	     xsi:noNamespaceSchemaLocation="index.xsd">
+	<detail>
+		<name>Primero</name>
+		<director>
+			<name>José Manuel Rubén</name>
+			<nationality>ESP</nationality>
+			<contact>
+				<phone>+00 16557</phone>
+				<email>jm.ruben@gmail.com</email>
+			</contact>
+		</director>
+		<season>1</season>
+		<start>2016-01-01</start>
+		<end>2016-12-31</end>
+	</detail>
+	<teams>
+		<team id="01">
+			<description>
+				<name>Sanha</name>
+				<short>SNH</short>
+				<trainer>
+					<name>Gina Carreiras</name>
+					<nationality>ESP</nationality>
+					<licence>A</licence>
+					<contact>
+						<phone>+00 58743</phone>
+						<email>gina.carreiras@gmail.com</email>
+					</contact>
+				</trainer>
+				<stadium>Estadio de Sanha</stadium>
+			</description>
+			<players>
+				<player position="goalkeeper">
+					<name>Alberto Carreiras</name>
+					<nationality>PRT</nationality>
+					<skill>7</skill>
+					<age>27</age>
+				</player>
+				<player position="defender">
+					<name>Uông Bửu Đích</name>
+					<nationality>VNM</nationality>
+					<skill special="technical">7.5</skill>
+					<age>28</age>
+				</player>
+				<player position="defender" status="captain">
+					<name>Francisco Calderón</name>
+					<nationality>ESP</nationality>
+					<skill>8.5</skill>
+					<age>26</age>
+				</player>
+				<player position="defender">
+					<name>Niccolò Azzoni</name>
+					<nationality>ITA</nationality>
+					<skill>7</skill>
+					<age>28</age>
+				</player>
+				<player position="midfielder">
+					<name>Feliciano Oliveira</name>
+					<nationality>PRT</nationality>
+					<skill>7</skill>
+					<age>27</age>
+				</player>
+				<player position="midfielder">
+					<name>Sergio Lascaris</name>
+					<nationality>ESP</nationality>
+					<skill special="free kicks">6.5</skill>
+					<age>31</age>
+				</player>
+				<player position="midfielder">
+					<name>Manolo Manzini</name>
+					<nationality>ITA</nationality>
+					<skill special="powerful">8</skill>
+					<age>24</age>
+				</player>
+				<player position="midfielder">
+					<name>Sebastien Lajoinie</name>
+					<nationality>FRA</nationality>
+					<skill>7</skill>
+					<age>27</age>
+				</player>
+				<player position="midfielder">
+					<name>Ciro Forestan</name>
+					<nationality>ITA</nationality>
+					<skill special="quick">7.5</skill>
+					<age>29</age>
+				</player>
+				<player position="forward">
+					<name>Vittorio Inzaghi</name>
+					<nationality>ITA</nationality>
+					<skill>8.5</skill>
+					<age>26</age>
+				</player>
+				<player position="forward">
+					<name>Juan Antonio Pintos del Valle</name>
+					<nationality>ESP</nationality>
+					<skill>6</skill>
+					<age>35</age>
+				</player>
+			</players>
+		</team>
+		<team id="02">
+			<description>
+				<name>Xavao</name>
+				<short>XAV</short>
+				<trainer>
+					<name>Hugo Odehnal</name>
+					<nationality>CZE</nationality>
+					<licence>B</licence>
+					<contact>
+						<phone>+00 56416</phone>
+						<email>hugo.carreiras@outlook.com</email>
+					</contact>
+				</trainer>
+				<stadium>Estadio de Sanha</stadium>
+			</description>
+			<players>
+				<player position="goalkeeper">
+					<name>Eriks Vārpinš</name>
+					<nationality>LVA</nationality>
+					<skill>6</skill>
+					<age>27</age>
+				</player>
+				<player position="defender">
+					<name>Leo Vápník</name>
+					<nationality>CZE</nationality>
+					<skill>6</skill>
+					<age>32</age>
+				</player>
+				<player position="defender">
+					<name>Milan Trkal</name>
+					<nationality>CZE</nationality>
+					<skill>6</skill>
+					<age>28</age>
+				</player>
+				<player position="defender">
+					<name>Anders Selblad</name>
+					<nationality>LTU</nationality>
+					<skill>7.5</skill>
+					<age>25</age>
+				</player>
+				<player position="midfielder">
+					<name>Erotas Tzolakidis</name>
+					<nationality>GRC</nationality>
+					<skill>7</skill>
+					<age>25</age>
+				</player>
+				<player position="midfielder">
+					<name>Sylvain von Matt</name>
+					<nationality>NLD</nationality>
+					<skill special="quick">6</skill>
+					<age>24</age>
+				</player>
+				<player position="midfielder">
+					<name>Milan Školník</name>
+					<nationality>CZE</nationality>
+					<skill special="powerful">6.5</skill>
+					<age>36</age>
+				</player>
+				<player position="midfielder">
+					<name>Alejandro González</name>
+					<nationality>MEX</nationality>
+					<skill special="technical">6.5</skill>
+					<age>26</age>
+				</player>
+				<player position="forward">
+					<name>Felix Krejcar</name>
+					<nationality>CZE</nationality>
+					<skill>6</skill>
+					<age>32</age>
+				</player>
+				<player position="forward">
+					<name>Heinrich Dörig</name>
+					<nationality>DEU</nationality>
+					<skill>7</skill>
+					<age>36</age>
+				</player>
+				<player position="forward" status="captain">
+					<name>Jean-Jacques Schneidewind</name>
+					<nationality>CHE</nationality>
+					<skill special="free kicks">6.5</skill>
+					<age>34</age>
+				</player>
+			</players>
+		</team>
+		<team id="03">
+			<description>
+				<name>Quernera</name>
+				<short>QUE</short>
+				<trainer>
+					<name>Manuelo Pantano</name>
+					<nationality>ESP</nationality>
+					<licence>A</licence>
+					<contact>
+						<phone>+00 56874</phone>
+						<email>mpantano@outlook.com</email>
+					</contact>
+				</trainer>
+				<stadium>Mejor Arena</stadium>
+			</description>
+			<players>
+				<player position="goalkeeper">
+					<name>Raneiro Gramatica</name>
+					<nationality>ITA</nationality>
+					<skill>6</skill>
+					<age>22</age>
+				</player>
+				<player position="defender">
+					<name>Michael di Bartolo</name>
+					<nationality>ITA</nationality>
+					<skill special="powerful">6</skill>
+					<age>30</age>
+				</player>
+				<player position="defender">
+					<name>Marcílio Teixeira</name>
+					<nationality>PRT</nationality>
+					<skill>6</skill>
+					<age>27</age>
+				</player>
+				<player position="defender">
+					<name>Ettore Bartoli</name>
+					<nationality>ITA</nationality>
+					<skill special="free kicks">7</skill>
+					<age>29</age>
+				</player>
+				<player position="defender">
+					<name>Odilson Paiva</name>
+					<nationality>BRA</nationality>
+					<skill special="head">5</skill>
+					<age>30</age>
+				</player>
+				<player position="midfielder">
+					<name>Giulio Scala</name>
+					<nationality>DEU</nationality>
+					<skill>8</skill>
+					<age>28</age>
+				</player>
+				<player position="midfielder">
+					<name>Luigino Isoardi</name>
+					<nationality>ITA</nationality>
+					<skill>7</skill>
+					<age>32</age>
+				</player>
+				<player position="midfielder">
+					<name>Sandalio Roa</name>
+					<nationality>ESP</nationality>
+					<skill special="quick">8</skill>
+					<age>30</age>
+				</player>
+				<player position="midfielder">
+					<name>Cristian Graziozo</name>
+					<nationality>ITA</nationality>
+					<skill>6</skill>
+					<age>30</age>
+				</player>
+				<player position="forward" status="captain">
+					<name>Ricardo Delgado</name>
+					<nationality>PER</nationality>
+					<skill special="technical">7</skill>
+					<age>33</age>
+				</player>
+				<player position="forward">
+					<name>Antauro Moyano</name>
+					<nationality>COL</nationality>
+					<skill>8.5</skill>
+					<age>29</age>
+				</player>
+			</players>
+		</team>
+		<team id="04">
+			<description>
+				<name>Presto Pallares</name>
+				<short>PRE</short>
+				<trainer>
+					<name>Alexandros Mousicos</name>
+					<nationality>GRC</nationality>
+					<licence>A</licence>
+					<contact>
+						<phone>+00 64158</phone>
+						<email>amusica@gmail.com</email>
+					</contact>
+				</trainer>
+				<stadium>Presto Arena</stadium>
+			</description>
+			<players>
+				<player position="goalkeeper">
+					<name>Yorgios Kalogeridis</name>
+					<nationality>GRC</nationality>
+					<skill>6.5</skill>
+					<age>27</age>
+				</player>
+				<player position="defender">
+					<name>Dalimil Polaković</name>
+					<nationality>HRV</nationality>
+					<skill special="quick">5.5</skill>
+					<age>26</age>
+				</player>
+				<player position="defender">
+					<name>Viliam Wiesner</name>
+					<nationality>POL</nationality>
+					<skill>5</skill>
+					<age>27</age>
+				</player>
+				<player position="defender">
+					<name>Boris van Kuppeveld</name>
+					<nationality>NLD</nationality>
+					<skill>6</skill>
+					<age>29</age>
+				</player>
+				<player position="defender">
+					<name>Dietmar Hüttlinger</name>
+					<nationality>DEU</nationality>
+					<skill special="head">5.5</skill>
+					<age>30</age>
+				</player>
+				<player position="midfielder">
+					<name>Samuel Sanchéz</name>
+					<nationality>ESP</nationality>
+					<skill>7</skill>
+					<age>27</age>
+				</player>
+				<player position="midfielder">
+					<name>Witek Mystek</name>
+					<nationality>POL</nationality>
+					<skill>5</skill>
+					<age>31</age>
+				</player>
+				<player position="midfielder">
+					<name>Marvin Warren</name>
+					<nationality>USA</nationality>
+					<skill>6</skill>
+					<age>32</age>
+				</player>
+				<player position="midfielder" status="captain">
+					<name>Marco Macchini</name>
+					<nationality>ITA</nationality>
+					<skill special="free kicks">7</skill>
+					<age>27</age>
+				</player>
+				<player position="forward">
+					<name>Massimo Fucso</name>
+					<nationality>ITA</nationality>
+					<skill special="technical">7.5</skill>
+					<age>29</age>
+				</player>
+				<player position="forward">
+					<name>Garry English</name>
+					<nationality>GBT</nationality>
+					<skill special="quick">7</skill>
+					<age>28</age>
+				</player>
+			</players>
+		</team>
+		<team id="05">
+			<description>
+				<name>Espartinas</name>
+				<short>ESP</short>
+				<trainer>
+					<name>Francisco Costales</name>
+					<nationality>PRT</nationality>
+					<licence>B</licence>
+					<contact>
+						<phone>+00 15645</phone>
+						<email>costales-frank@gmail.com</email>
+					</contact>
+				</trainer>
+				<stadium>Estadio de Espartinas</stadium>
+			</description>
+			<players>
+				<player position="goalkeeper">
+					<name>Gastón Foschiatti</name>
+					<nationality>ARG</nationality>
+					<skill>11</skill>
+					<age>18</age>
+				</player>
+				<player position="defender" status="captain">
+					<name>Václav Maxa</name>
+					<nationality>CZE</nationality>
+					<skill special="quick">5.5</skill>
+					<age>24</age>
+				</player>
+				<player position="defender">
+					<name>Guillermo Delpiano</name>
+					<nationality>CHL</nationality>
+					<skill>6</skill>
+					<age>20</age>
+				</player>
+				<player position="defender">
+					<name>Lucas Lemmonier</name>
+					<nationality>FRA</nationality>
+					<skill>7.5</skill>
+					<age>31</age>
+				</player>
+				<player position="defender">
+					<name>Yiorgios Chasidis</name>
+					<nationality>GRC</nationality>
+					<skill>6.5</skill>
+					<age>30</age>
+				</player>
+				<player position="midfielder">
+					<name>Jesús Zechinno</name>
+					<nationality>ESP</nationality>
+					<skill special="free kicks">6</skill>
+					<age>22</age>
+				</player>
+				<player position="midfielder">
+					<name>Emili Hernández</name>
+					<nationality>ESP</nationality>
+					<skill>6.5</skill>
+					<age>26</age>
+				</player>
+				<player position="midfielder">
+					<name>Jorge Oca</name>
+					<nationality>MEX</nationality>
+					<skill>6</skill>
+					<age>29</age>
+				</player>
+				<player position="midfielder">
+					<name>Manolo Muela</name>
+					<nationality>ESP</nationality>
+					<skill special="technical">6</skill>
+					<age>23</age>
+				</player>
+				<player position="forward">
+					<name>Rene Piccon</name>
+					<nationality>FRA</nationality>
+					<skill>7</skill>
+					<age>25</age>
+				</player>
+				<player position="forward">
+					<name>Peer Fast</name>
+					<nationality>USA</nationality>
+					<skill special="quick">6</skill>
+					<age>27</age>
+				</player>
+			</players>
+		</team>
+		<team id="06">
+			<description>
+				<name>Sheinis</name>
+				<short>SHE</short>
+				<trainer>
+					<name>Farkas László</name>
+					<nationality>HUN</nationality>
+					<licence>C</licence>
+					<contact>
+						<phone>+00 08740</phone>
+						<email>farlaszlo@gmail.com</email>
+					</contact>
+				</trainer>
+				<stadium>Sheinis Complex Arena</stadium>
+			</description>
+			<players>
+				<player position="goalkeeper">
+					<name>Otmar Farakaš</name>
+					<nationality>SVK</nationality>
+					<skill>6.5</skill>
+					<age>30</age>
+				</player>
+				<player position="defender">
+					<name>Gergely Neméth</name>
+					<nationality>HUN</nationality>
+					<skill>4.5</skill>
+					<age>28</age>
+				</player>
+				<player position="defender">
+					<name>Gianpiero Miccuci</name>
+					<nationality>ITA</nationality>
+					<skill special="free kicks">5</skill>
+					<age>24</age>
+				</player>
+				<player position="defender">
+					<name>Jorge Campana</name>
+					<nationality>ESP</nationality>
+					<skill>7.5</skill>
+					<age>28</age>
+				</player>
+				<player position="defender" status="captain">
+					<name>Ubaldo Dal Brun</name>
+					<nationality>ITA</nationality>
+					<skill>7</skill>
+					<age>28</age>
+				</player>
+				<player position="midfielder">
+					<name>Tero Siren</name>
+					<nationality>FIN</nationality>
+					<skill special="free kicks">6.5</skill>
+					<age>32</age>
+				</player>
+				<player position="midfielder">
+					<name>Arturs Zelmenis</name>
+					<nationality>LTU</nationality>
+					<skill special="quick">5.5</skill>
+					<age>31</age>
+				</player>
+				<player position="midfielder">
+					<name>Niels Moesgaard</name>
+					<nationality>DNK</nationality>
+					<skill>5</skill>
+					<age>25</age>
+				</player>
+				<player position="midfielder">
+					<name>Zdeněk Jirmus</name>
+					<nationality>CZE</nationality>
+					<skill>6.5</skill>
+					<age>30</age>
+				</player>
+				<player position="forward">
+					<name>Dimo Yonchev</name>
+					<nationality>BGR</nationality>
+					<skill special="powerful">9</skill>
+					<age>28</age>
+				</player>
+				<player position="forward">
+					<name>Hans-Heinrich Heynat</name>
+					<nationality>DEU</nationality>
+					<skill>8.5</skill>
+					<age>26</age>
+				</player>
+			</players>
+		</team>
+		<team id="07">
+			<description>
+				<name>Loueiro</name>
+				<short>LOU</short>
+				<trainer>
+					<name>Rufo Melgar</name>
+					<nationality>FRA</nationality>
+					<licence>A</licence>
+					<contact>
+						<phone>+00 68394</phone>
+						<email>rufo.melgar@gmail.com</email>
+					</contact>
+				</trainer>
+				<stadium>Estadio de Loueiro</stadium>
+			</description>
+			<players>
+				<player position="goalkeeper">
+					<name>Júlio Oliveira Campos</name>
+					<nationality>PRT</nationality>
+					<skill>7</skill>
+					<age>27</age>
+				</player>
+				<player position="defender">
+					<name>Augusto Eidocaín</name>
+					<nationality>ESP</nationality>
+					<skill>7.5</skill>
+					<age>25</age>
+				</player>
+				<player position="defender">
+					<name>Patricio Díaz</name>
+					<nationality>PRT</nationality>
+					<skill>7.5</skill>
+					<age>27</age>
+				</player>
+				<player position="defender">
+					<name>Julien Gignoux</name>
+					<nationality>FRE</nationality>
+					<skill>9</skill>
+					<age>28</age>
+				</player>
+				<player position="defender">
+					<name>Eduardo Díaz</name>
+					<nationality>USA</nationality>
+					<skill>7</skill>
+					<age>24</age>
+				</player>
+				<player position="midfielder">
+					<name>Óscar Valle Fernández</name>
+					<nationality>ESP</nationality>
+					<skill>8.5</skill>
+					<age>32</age>
+				</player>
+				<player position="midfielder" status="captain">
+					<name>Edson Zarta</name>
+					<nationality>COL</nationality>
+					<skill special="quick">7.5</skill>
+					<age>25</age>
+				</player>
+				<player position="midfielder">
+					<name>Odoacre Tessitore</name>
+					<nationality>ITA</nationality>
+					<skill>8</skill>
+					<age>33</age>
+				</player>
+				<player position="midfielder">
+					<name>Carlos Pedret</name>
+					<nationality>ESP</nationality>
+					<skill>8.5</skill>
+					<age>32</age>
+				</player>
+				<player position="forward">
+					<name>José Manuel Santos</name>
+					<nationality>ARG</nationality>
+					<skill>10</skill>
+					<age>28</age>
+				</player>
+				<player position="forward">
+					<name>Massimo Londero</name>
+					<nationality>ITA</nationality>
+					<skill special="free kicks">10</skill>
+					<age>32</age>
+				</player>
+			</players>
+		</team>
+		<team id="08">
+			<description>
+				<name>Pazos</name>
+				<short>PAZ</short>
+				<trainer>
+					<name>Cornelio Rondon</name>
+					<nationality>FRA</nationality>
+					<licence>B</licence>
+					<contact>
+						<phone>+00 35715</phone>
+						<email>corondon@outlook.com</email>
+					</contact>
+				</trainer>
+				<stadium>Estadio de Loueiro</stadium>
+			</description>
+			<players>
+				<player position="goalkeeper">
+					<name>Michele Varchi</name>
+					<nationality>ITA</nationality>
+					<skill>6</skill>
+					<age>32</age>
+				</player>
+				<player position="defender">
+					<name>Aleodor Cristian</name>
+					<nationality>ROU</nationality>
+					<skill>5</skill>
+					<age>28</age>
+				</player>
+				<player position="defender">
+					<name>Ho Nuñez</name>
+					<nationality>CRI</nationality>
+					<skill special="free kicks">7.5</skill>
+					<age>25</age>
+				</player>
+				<player position="defender">
+					<name>Zoran Langus</name>
+					<nationality>DEU</nationality>
+					<skill>7</skill>
+					<age>20</age>
+				</player>
+				<player position="midfielder">
+					<name>Jordan Delafosse</name>
+					<nationality>FRA</nationality>
+					<skill>9</skill>
+					<age>27</age>
+				</player>
+				<player position="midfielder">
+					<name>Josseline Coutable</name>
+					<nationality>FRA</nationality>
+					<skill>7.5</skill>
+					<age>26</age>
+				</player>
+				<player position="midfielder">
+					<name>Daniel Marull</name>
+					<nationality>CHL</nationality>
+					<skill special="quick">8</skill>
+					<age>31</age>
+				</player>
+				<player position="midfielder">
+					<name>Maxime Dourand</name>
+					<nationality>FRA</nationality>
+					<skill special="technical">8.5</skill>
+					<age>26</age>
+				</player>
+				<player position="forward">
+					<name>Laurent Ramonet</name>
+					<nationality>FRA</nationality>
+					<skill special="technical">9.5</skill>
+					<age>32</age>
+				</player>
+				<player position="forward">
+					<name>Vito Beggio</name>
+					<nationality>ITA</nationality>
+					<skill special="head">8.5</skill>
+					<age>25</age>
+				</player>
+				<player position="forward" status="captain">
+					<name>Mario Coviello</name>
+					<nationality>ITA</nationality>
+					<skill special="quick">9.5</skill>
+					<age>24</age>
+				</player>
+			</players>
+		</team>
+		<team id="09">
+			<description>
+				<name>Palmeires</name>
+				<short>PAL</short>
+				<trainer>
+					<name>Ramiro Fleites</name>
+					<nationality>ARG</nationality>
+					<licence>C</licence>
+					<contact>
+						<phone>+00 76812</phone>
+						<email>ramiro.fleites@outlook.com</email>
+					</contact>
+				</trainer>
+				<stadium>Estadio de Loueiro</stadium>
+			</description>
+			<players>
+				<player position="goalkeeper">
+					<name>Aimar Susaeta</name>
+					<nationality>ESP</nationality>
+					<skill>6.5</skill>
+					<age>19</age>
+				</player>
+				<player position="defender">
+					<name>Dani Bueie</name>
+					<nationality>BRA</nationality>
+					<skill>7</skill>
+					<age>22</age>
+				</player>
+				<player position="defender">
+					<name>Pantxi Trindade</name>
+					<nationality>FRA</nationality>
+					<skill>6</skill>
+					<age>21</age>
+				</player>
+				<player position="defender">
+					<name>Sathit Assanee</name>
+					<nationality>THA</nationality>
+					<skill>8.5</skill>
+					<age>22</age>
+				</player>
+				<player position="defender">
+					<name>Ante Angha</name>
+					<nationality>FRA</nationality>
+					<skill>9</skill>
+					<age>22</age>
+				</player>
+				<player position="midfielder">
+					<name>Mauricio Perrone</name>
+					<nationality>ARG</nationality>
+					<skill special="technical">9</skill>
+					<age>21</age>
+				</player>
+				<player position="midfielder">
+					<name>Bruno Galluci</name>
+					<nationality>ITA</nationality>
+					<skill>7.5</skill>
+					<age>21</age>
+				</player>
+				<player position="midfielder">
+					<name>Antonio Bayarri</name>
+					<nationality>ESP</nationality>
+					<skill>8</skill>
+					<age>25</age>
+				</player>
+				<player position="midfielder">
+					<name>Anuwat Rachayt</name>
+					<nationality>THA</nationality>
+					<skill special="quick">8.5</skill>
+					<age>18</age>
+				</player>
+				<player position="forward">
+					<name>Eke Inugbao</name>
+					<nationality>NGA</nationality>
+					<skill>7</skill>
+					<age>19</age>
+				</player>
+				<player position="forward" status="captain">
+					<name>Diego Tejero</name>
+					<nationality>ESP</nationality>
+					<skill special="free kicks">8.5</skill>
+					<age>20</age>
+				</player>
+			</players>
+		</team>
+		<team id="10">
+			<description>
+				<name>Zingo</name>
+				<short>ZNG</short>
+				<trainer>
+					<name>Amata Youtiao</name>
+					<nationality>CHN</nationality>
+					<licence>A</licence>
+					<contact>
+						<phone>+00 56147</phone>
+						<email>a.youtiao72@gmail.com</email>
+					</contact>
+				</trainer>
+				<stadium>Zingo Impact Arena</stadium>
+			</description>
+			<players>
+				<player position="goalkeeper">
+					<name>Panod Rakjid</name>
+					<nationality>THA</nationality>
+					<skill>6</skill>
+					<age>24</age>
+				</player>
+				<player position="defender">
+					<name>Aniv Puengpa</name>
+					<nationality>THA</nationality>
+					<skill>8.5</skill>
+					<age>20</age>
+				</player>
+				<player position="defender">
+					<name>Udomsak Priatying</name>
+					<nationality>THA</nationality>
+					<skill special="quick">6.5</skill>
+					<age>20</age>
+				</player>
+				<player position="defender">
+					<name>Eekachai Kaewarporn</name>
+					<nationality>THA</nationality>
+					<skill>8</skill>
+					<age>25</age>
+				</player>
+				<player position="midfielder">
+					<name>Benjamin Haussman</name>
+					<nationality>AUS</nationality>
+					<skill>7</skill>
+					<age>26</age>
+				</player>
+				<player position="midfielder">
+					<name>Hen Naamneh</name>
+					<nationality>ISR</nationality>
+					<skill>8</skill>
+					<age>21</age>
+				</player>
+				<player position="midfielder">
+					<name>Christian Chironi</name>
+					<nationality>ARG</nationality>
+					<skill special="free kicks">7</skill>
+					<age>21</age>
+				</player>
+				<player position="midfielder">
+					<name>Hugo Alleghini</name>
+					<nationality>ITA</nationality>
+					<skill>8</skill>
+					<age>19</age>
+				</player>
+				<player position="midfielder" status="captain">
+					<name>Florin Barburescu</name>
+					<nationality>ROU</nationality>
+					<skill special="quick">7.5</skill>
+					<age>20</age>
+				</player>
+				<player position="forward">
+					<name>Matt Jennings</name>
+					<nationality>GBR</nationality>
+					<skill>7</skill>
+					<age>26</age>
+				</player>
+				<player position="forward">
+					<name>Thierry Luissant</name>
+					<nationality>FRA</nationality>
+					<skill>8</skill>
+					<age>19</age>
+				</player>
+			</players>
+		</team>
+		<team id="11">
+			<description>
+				<name>Hyuni</name>
+				<short>HYU</short>
+				<trainer>
+					<name>Jib-Jib</name>
+					<nationality>THA</nationality>
+					<licence>C</licence>
+					<contact>
+						<phone>+00 46158</phone>
+						<email>jib-jib@outlook.com</email>
+					</contact>
+				</trainer>
+				<stadium>Hyuni Arena</stadium>
+			</description>
+			<players>
+				<player position="goalkeeper">
+					<name>Nicklas Halby</name>
+					<nationality>DNK</nationality>
+					<skill>6.5</skill>
+					<age>28</age>
+				</player>
+				<player position="defender" status="captain">
+					<name>Óscar Caldas</name>
+					<nationality>COL</nationality>
+					<skill>7</skill>
+					<age>22</age>
+				</player>
+				<player position="defender">
+					<name>Steve Carrick</name>
+					<nationality>GBR</nationality>
+					<skill special="quick">8.5</skill>
+					<age>31</age>
+				</player>
+				<player position="defender">
+					<name>Max Reichel</name>
+					<nationality>DEU</nationality>
+					<skill>6.5</skill>
+					<age>21</age>
+				</player>
+				<player position="defender">
+					<name>Sergio Arriaga</name>
+					<nationality>MEX</nationality>
+					<skill>7.5</skill>
+					<age>30</age>
+				</player>
+				<player position="midfielder">
+					<name>Tran Thanh Hung</name>
+					<nationality>VNM</nationality>
+					<skill special="free kicks">9</skill>
+					<age>24</age>
+				</player>
+				<player position="midfielder">
+					<name>Patricio Mabika</name>
+					<nationality>BEL</nationality>
+					<skill>8</skill>
+					<age>29</age>
+				</player>
+				<player position="midfielder">
+					<name>Aderlan do Nascimento</name>
+					<nationality>BRA</nationality>
+					<skill special="technical">8</skill>
+					<age>19</age>
+				</player>
+				<player position="midfielder">
+					<name>Thanapol Saengsiri</name>
+					<nationality>THA</nationality>
+					<skill special="quick">8.5</skill>
+					<age>29</age>
+				</player>
+				<player position="forward">
+					<name>Wouter van Dam</name>
+					<nationality>NLD</nationality>
+					<skill special="powerful">9.5</skill>
+					<age>19</age>
+				</player>
+				<player position="forward">
+					<name>Sukham Permdee</name>
+					<nationality>THA</nationality>
+					<skill>7</skill>
+					<age>20</age>
+				</player>
+			</players>
+		</team>
+		<team id="12">
+			<description>
+				<name>Pulpite</name>
+				<short>PUL</short>
+				<trainer>
+					<name>Kukkik Zaza</name>
+					<nationality>THA</nationality>
+					<licence>C</licence>
+					<contact>
+						<phone>+00 98564</phone>
+						<email>kukkik.zaza@gmail.com</email>
+					</contact>
+				</trainer>
+				<stadium>Hyuni Arena</stadium>
+			</description>
+			<players>
+				<player position="goalkeeper">
+					<name>Antonio Silvestri</name>
+					<nationality>ITA</nationality>
+					<skill>9.5</skill>
+					<age>18</age>
+				</player>
+				<player position="defender">
+					<name>Fabian Aydin</name>
+					<nationality>DEU</nationality>
+					<skill>7</skill>
+					<age>20</age>
+				</player>
+				<player position="defender" status="captain">
+					<name>George Hughes</name>
+					<nationality>GBR</nationality>
+					<skill>9.5</skill>
+					<age>22</age>
+				</player>
+				<player position="defender">
+					<name>Wichaya Chansaweang</name>
+					<nationality>THA</nationality>
+					<skill>7.5</skill>
+					<age>18</age>
+				</player>
+				<player position="defender">
+					<name>Víctor Andrade</name>
+					<nationality>COL</nationality>
+					<skill>8</skill>
+					<age>22</age>
+				</player>
+				<player position="midfielder">
+					<name>Thada Taweekul</name>
+					<nationality>THA</nationality>
+					<skill>9</skill>
+					<age>26</age>
+				</player>
+				<player position="midfielder">
+					<name>Jorge Ortiz</name>
+					<nationality>CHL</nationality>
+					<skill special="free kicks">8</skill>
+					<age>25</age>
+				</player>
+				<player position="midfielder">
+					<name>Lefteris Karsipodas</name>
+					<nationality>GRC</nationality>
+					<skill special="technical">8.5</skill>
+					<age>31</age>
+				</player>
+				<player position="midfielder">
+					<name>Pollawat Sawengsab</name>
+					<nationality>THA</nationality>
+					<skill special="quick">6.5</skill>
+					<age>21</age>
+				</player>
+				<player position="forward">
+					<name>Matías Santúa</name>
+					<nationality>ARG</nationality>
+					<skill special="technical">10</skill>
+					<age>25</age>
+				</player>
+				<player position="forward">
+					<name>Ilkay Akbay</name>
+					<nationality>TUR</nationality>
+					<skill special="powerful">9</skill>
+					<age>26</age>
+				</player>
+			</players>
+		</team>
+	</teams>
+</league>

@@ -1,0 +1,193 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	         xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" 
+	         vc:minVersion="1.1"
+	         elementFormDefault="qualified"
+	         xmlns="https://nichar.com"
+	         targetNamespace="https://nichar.com">
+	
+	<xsd:element name="league" type="leagueType">
+		<xsd:unique name="idUnique">
+			<xsd:selector xpath=".//team"/>
+			<xsd:field xpath="@id"/>
+		</xsd:unique>
+		<xsd:unique name="nameUnique">
+			<xsd:selector xpath=".//name"/>
+			<xsd:field xpath="."/>
+		</xsd:unique>
+		<xsd:unique name="shortUnique">
+			<xsd:selector xpath=".//short"/>
+			<xsd:field xpath="."/>
+		</xsd:unique>
+		<xsd:unique name="phoneUnique">
+			<xsd:selector xpath=".//phone"/>
+			<xsd:field xpath="."/>
+		</xsd:unique>
+		<xsd:unique name="emailUnique">
+			<xsd:selector xpath=".//email"/>
+			<xsd:field xpath="."/>
+		</xsd:unique>
+	</xsd:element>
+
+	<xsd:complexType name="leagueType">
+		<xsd:sequence>
+			<xsd:element name="detail" type="detailType"/>
+			<xsd:element name="teams" type="teamsType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="detailType">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string"/>
+			<xsd:element name="director" type="directorType"/>
+			<xsd:element name="season" type="xsd:positiveInteger"/>
+			<xsd:element name="start" type="xsd:date"/>
+			<xsd:element name="end" type="xsd:date"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="directorType">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string"/>
+			<xsd:element name="nationality" type="nationalityType"/>
+			<xsd:element name="contact" type="contactType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="contactType">
+		<xsd:sequence>
+			<xsd:element name="phone" type="phoneType"/>
+			<xsd:element name="email" type="emailType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="teamsType">
+		<xsd:choice minOccurs="2" maxOccurs="16">
+			<xsd:element name="team" type="teamType"/>
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:complexType name="teamType">
+		<xsd:sequence>
+			<xsd:element name="description" type="descriptionType"/>
+			<xsd:element name="players" type="playersType"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="idType"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="descriptionType">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string"/>
+			<xsd:element name="short" type="nationalityType"/>
+			<xsd:element name="trainer" type="trainerType"/>
+			<xsd:element name="stadium" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="trainerType">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string"/>
+			<xsd:element name="nationality" type="nationalityType"/>
+			<xsd:element name="licence" type="licenceType"/>
+			<xsd:element name="contact" type="contactType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="playersType">
+		<xsd:choice maxOccurs="20" minOccurs="11">
+			<xsd:element name="player" type="playerType"/>
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:complexType name="playerType">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string"/>
+			<xsd:element name="nationality" type="nationalityType"/>
+			<xsd:element name="skill" type="skillType"/>
+			<xsd:element name="age" type="ageType"/>
+		</xsd:sequence>
+		<xsd:attribute name="position" type="positionType" use="required"/>
+		<xsd:attribute name="status" type="statusType" use="optional"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="skillType">
+		<xsd:simpleContent>
+			<xsd:extension base="skillHalfDoubleType">
+				<xsd:attribute name="special" use="optional">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="free kicks"/>
+							<xsd:enumeration value="quick"/>
+							<xsd:enumeration value="powerful"/>
+							<xsd:enumeration value="technical"/>
+							<xsd:enumeration value="head"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="phoneType">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\+00 \d{5}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="emailType">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="nationalityType">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[A-Z]{3}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="licenceType">
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="PRO"/>
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="ageType">
+		<xsd:restriction base="xsd:integer">
+			<xsd:minInclusive value="15"/>
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="idType">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="(0[1-9]|[1-9][0-9])"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="positionType">
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="goalkeeper"/>
+			<xsd:enumeration value="defender"/>
+			<xsd:enumeration value="midfielder"/>
+			<xsd:enumeration value="forward"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="statusType">
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="captain"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="skillHalfDoubleType">
+		<xsd:restriction base="xsd:double">
+			<xsd:assertion test="$value = (for $d in 1 to 40 return 0.5 * $d)"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>

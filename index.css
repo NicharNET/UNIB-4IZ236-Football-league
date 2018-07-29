@@ -1,0 +1,203 @@
+html, body {
+	font-family: Calibri;
+	margin: 0;
+   padding: 0;
+}
+
+div#header-bar {
+	background: #57102C;
+	height: 9px;
+	width: 100%;
+}
+
+
+div#circle {
+	right: 27px;
+	height: 60px;
+   width: 60px;
+   top: 27px;
+   background: #A92159;
+   position: absolute;
+   border-radius: 100%;
+}
+
+p#circle {
+	color: white;
+   text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+	left: 27px;
+	font-size: 18px;
+}
+
+/* DIV HEADER*/
+
+div#header {
+	height: 60px;
+	width: 100%;
+}
+
+table#header {
+	width: 800px;
+	height: 60px;
+	margin-left: auto; 
+	margin-right: auto;
+	padding: 0px;
+	border-collapse: collapse;
+   border-spacing: 0px;
+	font-weight: bold;
+}
+
+td#header-league {
+   vertical-align: middle;
+   font-weight: bold;
+	color: #57102C;
+	font-size: 16px;
+	width: 500px
+}
+
+tr#header-menu {
+	width: 150px;
+	height: 27px;
+	font-size: 12px;
+	font-weight: bold;
+	vertical-align: bottom;
+	height: 30px;
+}
+
+td#header-menu {
+	font-style: italic;
+}
+
+a#_01:link {
+	text-decoration: none;
+	width: 150px;
+	color: #BCC747;
+}
+
+a#_02:link {
+	text-decoration: none;
+	width: 150px;
+	color: #A92159;
+}
+
+a#_03:link {
+	text-decoration: none;
+	width: 150px;
+	color: #4CA8A1;
+}
+
+a#_01:visited {
+	text-decoration: none;
+	width: 150px;
+	color: #BCC747;
+}
+
+a#_02:visited {
+	text-decoration: none;
+	width: 150px;
+	color: #A92159;
+}
+
+a#_03:visited {
+	text-decoration: none;
+	width: 150px;
+	color: #4CA8A1;
+}
+
+tr#header-choice {
+	font-size: 18px;
+	font-weight: bold;
+	vertical-align: top;
+	height: 30px;
+}
+
+/* DIV LEAGUE*/
+
+div#league {
+	background: #4CA8A1;
+	height: 100px;
+	width: 100%;
+}
+
+table#league {
+	border-spacing: 10px 0;
+	position: absolute;
+	width: 50%;
+	height: 100px;
+	margin-left: 25%; 
+	margin-right: 25%;
+	font-size: 12px;
+	color: white;
+	padding: 0px;
+	border-collapse: separate;
+}
+
+td#league-left {
+	text-align: left;
+}
+
+td#league-right {
+	text-align: right;
+}
+
+/* DIV TEAMS */
+
+div#teams {
+	background: white;
+	height: 540px;
+   width: 100%;
+}
+
+table#teams {
+	position: absolute;
+	text-align: center;
+	vertical-align: middle;
+	width: 75%; 
+ 	margin-left: 15%; 
+ 	margin-right: 15%;
+ 	margin-top: 50px;
+}
+
+tr#teams-label {
+	font-weight: bold;
+	background: #A92159;
+	color: white;
+	height: 20px;
+}
+
+table#teams td {
+	width: 10%;
+}
+
+tr#teams{
+	color: #57102C;
+}
+
+h2 {
+	margin-left: 175px;
+	color: #57102C;
+	font-size: 20px;
+}
+
+h4#footer {
+	margin-left: 10px;
+	color: white;
+	font-size: 16px;
+}
+
+img {
+	position: absolute;
+	left: 50%;
+	margin-left: -200px;
+	top: 200px;
+	width: 400px;
+	height: 400px;
+}
+
+div#footer {
+	background: #A92159;
+	height: 45px;
+	width: 100%;
+   bottom: 0;
+}
