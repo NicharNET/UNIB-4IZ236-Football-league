@@ -15,6 +15,20 @@ This is also my very first XSLT transformation to both HTML and PDF from 2016 an
 Quality check
 I have integrated Codebeat and Codacy cloud static analysis services to check the overall code quality out of curiosity.
 
+### Input
+
+#### XML file
+
+The only input is the XML file.
+
+### Transformation
+
+### Ouptut
+
+#### HTML
+
+#### PDF
+
 ## Licence
 
 MIT License
