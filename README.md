@@ -1,5 +1,7 @@
 # UNIB-4IZ236-Football-league
 
+[![codebeat badge](https://codebeat.co/badges/fb32e12d-6a48-452b-a24b-327918bf1aa1)](https://codebeat.co/projects/github-com-nicharnet-unib-4iz236-football-league-master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/50efc37159ae46579add55cda74e44e7)](https://www.codacy.com/app/NicharNET/UNIB-4IZ236-Football-league?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=NicharNET/UNIB-4IZ236-Football-league&amp;utm_campaign=Badge_Grade)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/LICENSE)
 
 XSLT transformation to both HTML and PDF applied on a XML file with football league data
