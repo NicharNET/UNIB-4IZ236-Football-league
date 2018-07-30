@@ -78,9 +78,9 @@ The crucial part of the semestral work is the transformation into HTML and PDF o
 
 ### [index.xsl](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.xsl)
 
-The first transformation produces the website consisted of mutually linked HTML pages deployed on the project's [GitHub Pages](https://nicharnet.github.io/UNIB-4IZ236-Football-league) with the a similar design but variable linked content.
+The first transformation produces the website consisted of mutually linked HTML pages deployed on the project's [GitHub Pages](https://nicharnet.github.io/UNIB-4IZ236-Football-league) with the similar design but variable linked content.
 
-All the transformations are applied on the root element `/` and defines immediatelly self as a template rendered to `index.html` with  to generated partial templates under the `div` containers:
+All the transformations are applied to the root element `/` and define immediately self as a template rendered to `index.html` with  to generated partial templates under the `div` containers:
 
 ```XML
 <xsl:template match="/">
@@ -116,7 +116,7 @@ All the transformations are applied on the root element `/` and defines immediat
 </xsl:template>
 ```
 
-An brief example of the `en:teams` template responsible that each team have own page generated into `chunks` folder.
+An brief example of the `en:teams` template responsible that each team have own page generated into `chunks` folder:
 
 ```XML
 <xsl:template match="en:teams">
@@ -170,6 +170,60 @@ An brief example of the `en:teams` template responsible that each team have own 
 ### [index-fo.xsl](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index-fo.xsl)
 
 On the similar principle works the transformation to PDF with a watermark. In the beginning, there is generated a table of contents with links to particular pages. Each team is rendered to the separated page. Last few pages have generated tables with the best players.
+
+This transformation is three times more verbose than the previous one because of the design redefinition since CSS can not be used to this kind of transformation. However, unlike the used elemenets, the principle is pretty identical. A breif example of a block summary of the best goalkeepers follows:
+
+```XML
+<xsl:template name="bestPlayers">
+    <fo:block id="bestPlayers" break-before="page"></fo:block>
+        <xsl:call-template name="watermark"/>
+        <fo:block font-size="9mm" text-align="center" padding-top="5mm">
+            <xsl:text>Best players</xsl:text>
+        </fo:block>
+	
+	<!-- /* Block for the best goalkeepers */-->
+        <fo:block padding-before="1cm" width="75%">
+            <fo:block margin-left="2cm">
+                <fo:block font-size="6mm" padding-after="5mm">
+	            <xsl:text>Best goalkeepers</xsl:text>
+	        </fo:block>		
+                <fo:table text-align="center" white-space="nowrap" width="75%" font-size="3mm">
+                    <fo:table-column width="20%"/>
+                    <!-- /* SKIPPED: 4 identical lines */-->
+                    <fo:table-column width="20%"/>
+	
+	            <!-- /* Table header definition */-->
+                    <fo:table-header>
+                        <fo:table-row font-size="3mm" height="8mm">
+                            <fo:table-cell><fo:block>NAME</fo:block></fo:table-cell>
+                            <!-- /* SKIPPED: Age, Nationality and Skill */-->
+                            <fo:table-cell><fo:block>TEAM</fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block></fo:block></fo:table-cell>
+                        </fo:table-row>
+                    </fo:table-header>
+	
+	            <!-- /* Table body definition */-->
+                    <fo:table-body padding-top="5mm">		
+                        <xsl:for-each select=
+				 "en:league/en:teams/en:team/en:players/en:player[@position='goalkeeper']">
+                            <xsl:sort select="en:skill" data-type="number" order="descending"/>
+                            <xsl:if test="position() &lt;= 6"> 
+	                        <!-- /* Call of the template rendering the player characteristics */-->
+                                <xsl:call-template name="six-characteristics"> 
+                                    <xsl:with-param name="node" select="."/>
+                                </xsl:call-template>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </fo:table-body>
+                </fo:table>			
+            </fo:block>
+        </fo:block>
+
+        <!-- /* SKIPPED: 3 blocks for the defenders, midfielders and forwards */-->
+	
+    </fo:block>
+</xsl:template>
+```
 
 ## Ouptut
 
