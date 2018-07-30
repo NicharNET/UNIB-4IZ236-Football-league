@@ -4,15 +4,15 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/50efc37159ae46579add55cda74e44e7)](https://www.codacy.com/app/NicharNET/UNIB-4IZ236-Football-league?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=NicharNET/UNIB-4IZ236-Football-league&amp;utm_campaign=Badge_Grade)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/LICENSE)
 
-XSLT transformation to both HTML and PDF applied on a XML file with football league data
+XSLT transformation to both HTML and PDF applied on an XML file with football league data
 
 ### [https://nicharnet.github.io/UNIB-4IZ236-Football-league/](https://nicharnet.github.io/UNIB-4IZ236-Football-league/)
 
-This is also my very first XSLT transformation to both HTML and PDF from 2016 and published now. The entire semestral work could be divided to 4 separated processes. 
+This is also my very first XSLT transformation to both HTML and PDF from 2016 and published now. The entire semestral work could be divided into 4 separated processes. 
 
 ## Input
 
-The only input is a  XML file.
+The only input is an XML file.
 
 ### [index.xml](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.html)
 
@@ -40,21 +40,23 @@ It's the input XML file with a root element `league` and two its descendants `de
 ```
 ## Validation
 
-The only input XML file validated against both a XSD file and a Schematron file.
+The only input XML file validated against both an XSD file and a Schematron file.
 
 ### [index.xsd](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.xsd)
 
 This XSD file is a crucial validation file for the input XML which validates its entire structure, the allowed count and order of the particular elements and the data type and format of their values. The following list provides a selection of the most important rules (not ordered by the importance):
 
- - All the names, shortcuts and contacts has to remain distinct
+ - All the names, shortcuts and contacts have to remain distinct
  - Each team is allowed to recruit at least `11` and up to `20` players and each player is between `15` and `99` years, both inclusive
  - Some of them are talented and their skill has to match the enumeration: `free kicks`, `quick`, `powerful`, `technical` or `head`
- - All the contacts, licences and ID's must match the format usually defined with a regular expression (Regex)
+ - All the contacts, licenses and ID's must match the format usually defined with a regular expression (Regex)
  - A player can play on one of 4 available positions: `goalkeeper`, `defender`, `midfielder` or `forward`
- - Their overall skill is represented with a double number between `1` and `40`, both inclusive round on the halves using:
+ - Their overall skill is represented by a double number between `1` and `40`, both inclusive round on the halves using:
      ```XML
      <xsd:assertion test="$value = (for $d in 1 to 40 return 0.5 * $d)"/>
      ````   
+     
+I have used the Venetian Blind design.
 
 ### [index.sch](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.sch)
 
@@ -72,6 +74,14 @@ The Schematron validation is a minor and a supplementary validation file using X
 
 ## Transformation
 
+### [index.xsl](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.xsl)
+
+The first transformation produces the website consisted of mutually linked HTML pages deployed on the project's [GitHub Pages](https://nicharnet.github.io/UNIB-4IZ236-Football-league) with the similar design but variable linked content.
+
+### [index-fo.xsl](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index-fo.xsl)
+
+On the similar principle works the transformation to PDF with a watermark. In the beginning, there is generated a table of contents with links to particular pages. Each team is rendered to the separated page. Last few pages have generated tables with the best players.
+
 ## Ouptut
 
 ### HTML
@@ -79,7 +89,7 @@ The Schematron validation is a minor and a supplementary validation file using X
 ### PDF
 
 ## Quality check
-I have integrated Codebeat and Codacy cloud static analysis services to check the overall code quality out of curiosity.
+I have integrated [Codebeat](https://codebeat.co) and [Codacy](https://www.codacy.com) cloud static analysis services to check the overall code quality out of curiosity. 
 
 ## Licence
 
