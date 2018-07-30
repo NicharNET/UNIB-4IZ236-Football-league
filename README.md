@@ -8,7 +8,7 @@ XSLT transformation to both HTML and PDF applied on a XML file with football lea
 
 ### [https://nicharnet.github.io/UNIB-4IZ236-Football-league/](https://nicharnet.github.io/UNIB-4IZ236-Football-league/)
 
-This is also my very first XSLT transformation to both HTML and PDF from 2016 and published now.
+This is also my very first XSLT transformation to both HTML and PDF from 2016 and published now. The entire semestral work could be divided to 4 separated processes. 
 
 ## Input
 
@@ -46,9 +46,15 @@ The only input XML file validated against both a XSD file and a Schematron file.
 
 This XSD file is a crucial validation file for the input XML which validates its entire structure, the allowed count and order of the particular elements and the data type and format of their values. The following list provides a selection of the most important rules (not ordered by the importance):
 
- - A
- - B
- - C
+ - All the names, shortcuts and contacts has to remain distinct
+ - Each team is allowed to recruit at least `11` and up to `20` players and each player is between `15` and `99` years, both inclusive
+ - Some of them are talented and their skill has to match the enumeration: `free kicks`, `quick`, `powerful`, `technical` or `head`
+ - All the contacts, licences and ID's must match the format usually defined with a regular expression (Regex)
+ - A player can play on one of 4 available positions: `goalkeeper`, `defender`, `midfielder` or `forward`
+ - Their overall skill is represented with a double number between `1` and `40`, both inclusive round on the halves using:
+     ```XML
+     <xsd:assertion test="$value = (for $d in 1 to 40 return 0.5 * $d)"/>
+     ````   
 
 ### [index.sch](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.sch)
 
