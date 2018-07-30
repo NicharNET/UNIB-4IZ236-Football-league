@@ -18,6 +18,8 @@ The only input is an XML file.
 
 It's the input XML file with a root element `league` and two its descendants `detail` describing the league detail and `teams` which lists the detailed description of the team itself and all its players. A brief form appears below:
 
+<details><summary>Example</summary>
+	
 ```XML
 <league>
     <detail>
@@ -38,6 +40,8 @@ It's the input XML file with a root element `league` and two its descendants `de
     </teams>
 </league>
 ```
+</details>
+
 ## Validation
 
 The only input XML file validated against both an XSD file and a Schematron file.
@@ -62,6 +66,8 @@ I have used the Venetian Blind design.
 
 The Schematron validation is a minor and a supplementary validation file using XPath. Its only job is to assure that each team will have only and exactly one player market as a captain. A part of the overall score was the usage of a Schematron file and the captain validation is a job which suits Schematron a lot:
 
+<details><summary>Schematron</summary>
+
 ```XML
 <pattern id="check">
     <rule context="//teams/team">
@@ -71,6 +77,7 @@ The Schematron validation is a minor and a supplementary validation file using X
     </rule>
 </pattern>
 ```
+</details>
 
 ## Transformation
 
@@ -81,6 +88,8 @@ The crucial part of the semestral work is the transformation into HTML and PDF o
 The first transformation produces the website consisted of mutually linked HTML pages deployed on the project's [GitHub Pages](https://nicharnet.github.io/UNIB-4IZ236-Football-league) with the similar design but variable linked content.
 
 All the transformations are applied to the root element `/` and define immediately self as a template rendered to `index.html` with  to generated partial templates under the `div` containers:
+
+<details><summary>Example</summary>
 
 ```XML
 <xsl:template match="/">
@@ -115,8 +124,11 @@ All the transformations are applied to the root element `/` and define immediate
     </xsl:result-document>
 </xsl:template>
 ```
+</details>
 
 An brief example of the `en:teams` template responsible that each team have own page generated into `chunks` folder:
+
+<details><summary>Example</summary>
 
 ```XML
 <xsl:template match="en:teams">
@@ -166,6 +178,7 @@ An brief example of the `en:teams` template responsible that each team have own 
     </table>
 </xsl:template>
 ```
+</details>
 
 ### [index-fo.xsl](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index-fo.xsl)
 
@@ -173,6 +186,8 @@ On the similar principle works the transformation to PDF with a watermark. In th
 
 This transformation is three times more verbose than the previous one because of the design redefinition since CSS can not be used to this kind of transformation. However, unlike the used elemenets, the principle is pretty identical. A breif example of a block summary of the best goalkeepers follows:
 
+<details><summary>Example</summary>
+	
 ```XML
 <xsl:template name="bestPlayers">
     <fo:block id="bestPlayers" break-before="page"></fo:block>
@@ -224,6 +239,7 @@ This transformation is three times more verbose than the previous one because of
     </fo:block>
 </xsl:template>
 ```
+</details>
 
 ## Ouptut
 
