@@ -84,35 +84,35 @@ All the transformations are applied on the root element `/` and defines immediat
 
 ```XML
 <xsl:template match="/">
-	<xsl:result-document href="index.html" format="html">
-		<html>
-			<head>
-				<!-- /* SKIPPED: The header */ -->
-			</head>
-			<body>
-				<div id="header-bar"/> <xsl:call-template name="header-bar"/>	
-				<div id="header">       
-                    <xsl:call-template name="header-index"/>                    <!-- /* Menu template */-->
-				</div>	
-				<div id="league">
-					<xsl:apply-templates select="//en:detail"/>	                <!-- /* League summary template */-->
-				</div>
-				<div id="teams">
-					<xsl:apply-templates select="//en:teams"/>                  <!-- /* Teams table template */-->
-				</div>
-				<div id="footer">
-					<xsl:call-template name="footer"/>                          <!-- /* Footer template */-->
-				</div>
-			</body>
-		</html>
-	</xsl:result-document>
+    <xsl:result-document href="index.html" format="html">
+        <html>
+            <head>
+                <!-- /* SKIPPED: The header */ -->
+            </head>
+            <body>
+                <div id="header-bar"/> <xsl:call-template name="header-bar"/>	
+                <div id="header">       
+                    <xsl:call-template name="header-index"/>         <!-- /* Menu template */-->
+                </div>	
+                <div id="league">
+                    <xsl:apply-templates select="//en:detail"/>	     <!-- /* League summary template */-->
+                </div>
+                <div id="teams">
+                    <xsl:apply-templates select="//en:teams"/>       <!-- /* Teams table template */-->
+                </div>
+                <div id="footer">
+                    <xsl:call-template name="footer"/>               <!-- /* Footer template */-->
+                </div>
+            </body>
+        </html>
+    </xsl:result-document>
     
-    <xsl:result-document href="best-players.html">                              <!-- /* Best players page render */-->
-		<xsl:call-template name="best-players"/>
-	</xsl:result-document>
-	<xsl:result-document href="top-11.html">	                            	<!-- /* Top 11 page render */-->
-		<xsl:call-template name="top-11"/>
-	</xsl:result-document>
+    <xsl:result-document href="best-players.html">                   <!-- /* Best players page render */-->
+        <xsl:call-template name="best-players"/>
+    </xsl:result-document>
+    <xsl:result-document href="top-11.html">	                     <!-- /* Top 11 page render */-->
+        <xsl:call-template name="top-11"/>
+    </xsl:result-document>
 </xsl:template>
 ```
 
@@ -120,44 +120,50 @@ An brief example of the `en:teams` template responsible that each team have own 
 
 ```XML
 <xsl:template match="en:teams">
-	<h2>Teams</h2>
-	<table id="teams">
-		<tr id="teams-label">
-			<!-- /* SKIPPED: Table header labels */-->
-		</tr>
-		<xsl:for-each select="en:team">
+    <h2>Teams</h2>
+    <table id="teams">
+        <tr id="teams-label">
+            <!-- /* SKIPPED: Table header labels */-->
+        </tr>
+        <xsl:for-each select="en:team">
     
             <!-- /* Sorted table of teams with links to the newly generated pages below */-->
-			<xsl:sort select="@id"/>
-			<tr id="teams">
-				<td><a href="chunks/{translate(en:description/en:name, $uppercase, $lowercase)}.html"><xsl:value-of select="@id"/></a></td>
-				<td><xsl:value-of select="en:description/en:short"/></td>
-				<td><xsl:value-of select="en:description/en:name"/></td>
-				<td><xsl:value-of select="en:description/en:trainer/en:name"/></td>
-				<td><xsl:value-of select="en:calculatePower(en:players)"/></td>
-			</tr>
+            <xsl:sort select="@id"/>
+                <tr id="teams">
+                    <td><a href="chunks/{translate(en:description/en:name, $uppercase, $lowercase)}.html">
+	                <xsl:value-of select="@id"/>
+	            </a></td>
+                    <td><xsl:value-of select="en:description/en:short"/></td>
+                    <td><xsl:value-of select="en:description/en:name"/></td>
+                    <td><xsl:value-of select="en:description/en:trainer/en:name"/></td>
+                    <td><xsl:value-of select="en:calculatePower(en:players)"/></td>
+                </tr>
      
             <!-- /* Generated page for each team */-->
-			<xsl:result-document href="chunks/{translate(en:description/en:name, $uppercase, $lowercase)}.html" format="html">
-				<html>
-					<head>
-						<title><xsl:value-of select="en:description/en:name"/></title>
-						<link rel="stylesheet" type="text/css" href="../index.css"/>
-					</head>
-					<body>
-						<!-- /* SKIPPED: Header and  watermark */-->	
-						<div id="league">
-							<xsl:apply-templates select="en:description"/>    <!-- /* Generated team description using another template */-->
-						</div>
-						<div id="teams">
-							<xsl:apply-templates select="en:players"/>        <!-- /* Generated list of players using another template */-->
-						</div>
-						<div id="footer"/>
-					</body>
-				</html>
-			</xsl:result-document>
-		</xsl:for-each>
-	</table>
+            <xsl:result-document 
+		    href="chunks/{translate(en:description/en:name, $uppercase, $lowercase)}.html" 
+		    format="html">
+                <html>
+                    <head>
+                        <title><xsl:value-of select="en:description/en:name"/></title>
+                        <link rel="stylesheet" type="text/css" href="../index.css"/>
+                    </head>
+                    <body>
+                        <!-- /* SKIPPED: Header and  watermark */-->	
+                        <div id="league">
+	                    <!-- /* Generated team description using another template */-->
+                            <xsl:apply-templates select="en:description"/>    
+                        </div>
+                        <div id="teams">
+	                    <!-- /* Generated list of players using another template */-->
+                            <xsl:apply-templates select="en:players"/>        
+                        </div>
+                        <div id="footer"/>
+                    </body>
+                </html>
+            </xsl:result-document>
+        </xsl:for-each>
+    </table>
 </xsl:template>
 ```
 
