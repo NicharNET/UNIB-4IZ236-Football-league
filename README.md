@@ -241,7 +241,25 @@ This transformation is three times more verbose than the previous one because of
 
 ## Ouptut
 
+This section offers an overall view to the generated content structure.
+
 ### HTML
+
+ - [index.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/index.html)
+   - [chunks/sanha.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/chunks/sanha.html)
+   - [chunks/xavao.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/chunks/xavao.html)
+   - [chunks/quernera.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/chunks/quernera.html)
+   - [chunks/presto%20pallares.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/chunks/presto%20pallares.html)
+   - [chunks/espartinas.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/chunks/espartinas.html)
+   - [chunks/sheinis.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/chunks/sheinis.html)
+   - [chunks/loueiro.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/chunks/loueiro.html)
+   - [chunks/pazos.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/chunks/pazos.html)
+   - [chunks/palmeires.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/chunks/palmeires.html)
+   - [chunks/zingo.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/chunks/zingo.html)
+   - [chunks/hyuni.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/chunks/hyuni.html)
+   - [chunks/pulpite.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/chunks/pulpite.html)
+ - [best-players.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/best-players.html)
+ - [top-11.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/top-11.html)
 
 ### PDF
 
