@@ -18,7 +18,7 @@ The only input is an XML file.
 
 It's the input XML file with a root element `league` and two its descendants `detail` describing the league detail and `teams` which lists the detailed description of the team itself and all its players. A brief form appears below:
 
-<details><summary>Example</summary>
+<details><summary>XML input example</summary>
 	
 ```XML
 <league>
@@ -89,7 +89,7 @@ The first transformation produces the website consisted of mutually linked HTML 
 
 All the transformations are applied to the root element `/` and define immediately self as a template rendered to `index.html` with  to generated partial templates under the `div` containers:
 
-<details><summary>Example</summary>
+<details><summary>The root element template</summary>
 
 ```XML
 <xsl:template match="/">
@@ -126,9 +126,10 @@ All the transformations are applied to the root element `/` and define immediate
 ```
 </details>
 
+
 An brief example of the `en:teams` template responsible that each team have own page generated into `chunks` folder:
 
-<details><summary>Example</summary>
+<details><summary>The teams template</summary>
 
 ```XML
 <xsl:template match="en:teams">
@@ -186,7 +187,7 @@ On the similar principle works the transformation to PDF with a watermark. In th
 
 This transformation is three times more verbose than the previous one because of the design redefinition since CSS can not be used to this kind of transformation. However, unlike the used elemenets, the principle is pretty identical. A breif example of a block summary of the best goalkeepers follows:
 
-<details><summary>Example</summary>
+<details><summary>The best goalkeepers template</summary>
 	
 ```XML
 <xsl:template name="bestPlayers">
