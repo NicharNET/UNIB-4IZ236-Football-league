@@ -12,9 +12,32 @@ This is also my very first XSLT transformation to both HTML and PDF from 2016 an
 
 ## Input
 
-### XML file
+The only input is a XML file validated against a XSD file and a Schematron file.
 
-The only input is the XML file.
+### index.xml
+
+It's the input XML file with a root element `league` and two its descendants `detail` describing the league detail and `teams` which lists the detailed description of the team itself and all its players. A brief form appears below:
+
+```XML
+<league>
+    <detail>
+        <!--/* League details */ -->
+    </detail>
+    <teams>
+        <team>
+            <description>
+                <!--/* Team description */ -->
+            </description>
+            <players>
+                <player>
+                    <!--/* Player description */ -->
+                </player>
+                <!--/* Another player */ -->
+        </team>
+        <!--/* Another team */ -->
+    </teams>
+</league>
+```
 
 ## Transformation
 
