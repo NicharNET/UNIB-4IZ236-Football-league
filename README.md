@@ -12,7 +12,7 @@ This is also my very first XSLT transformation to both HTML and PDF from 2016 an
 
 ## Input
 
-The only input is an XML file.
+The only input is an XML file. All the names and numbers are fictional or randomly generated in the past and exclusively created by myself only.
 
 ### [index.xml](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.html)
 
@@ -263,6 +263,10 @@ This section offers an overall view to the generated content structure.
 
 ### PDF
 
+ - [index.pdf](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.pdf)
+ 
+    The GitHub PDF viewer doesn't suppor the links to the pages. There is need to download the file for the full functionality.
+ 
 ## Quality check
 I have integrated [Codebeat](https://codebeat.co) and [Codacy](https://www.codacy.com) cloud static analysis services to check the overall code quality out of curiosity. 
 
