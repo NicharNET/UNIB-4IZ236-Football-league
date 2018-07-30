@@ -44,7 +44,7 @@ The only input XML file validated against both an XSD file and a Schematron file
 
 ### [index.xsd](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.xsd)
 
-This XSD file is a crucial validation file for the input XML which validates its entire structure, the allowed count and order of the particular elements and the data type and format of their values. The following list provides a selection of the most important rules (not ordered by the importance):
+This XSD file is a validation file for the input XML which validates its entire structure, the allowed count and order of the particular elements and the data type and format of their values. The following list provides a selection of the most important rules (not ordered by the importance):
 
  - All the names, shortcuts and contacts have to remain distinct
  - Each team is allowed to recruit at least `11` and up to `20` players and each player is between `15` and `99` years, both inclusive
@@ -74,9 +74,92 @@ The Schematron validation is a minor and a supplementary validation file using X
 
 ## Transformation
 
+The crucial part of the semestral work is the transformation into HTML and PDF output with mutually linked pages and aggregation functions. Each transformation has defined a set of functions applicable to the statistics of the players.
+
 ### [index.xsl](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.xsl)
 
-The first transformation produces the website consisted of mutually linked HTML pages deployed on the project's [GitHub Pages](https://nicharnet.github.io/UNIB-4IZ236-Football-league) with the similar design but variable linked content.
+The first transformation produces the website consisted of mutually linked HTML pages deployed on the project's [GitHub Pages](https://nicharnet.github.io/UNIB-4IZ236-Football-league) with the a similar design but variable linked content.
+
+All the transformations are applied on the root element `/` and defines immediatelly self as a template rendered to `index.html` with  to generated partial templates under the `div` containers:
+
+```XML
+<xsl:template match="/">
+	<xsl:result-document href="index.html" format="html">
+		<html>
+			<head>
+				<!-- /* SKIPPED: The header */ -->
+			</head>
+			<body>
+				<div id="header-bar"/> <xsl:call-template name="header-bar"/>	
+				<div id="header">       
+                    <xsl:call-template name="header-index"/>                    <!-- /* Menu template */-->
+				</div>	
+				<div id="league">
+					<xsl:apply-templates select="//en:detail"/>	                <!-- /* League summary template */-->
+				</div>
+				<div id="teams">
+					<xsl:apply-templates select="//en:teams"/>                  <!-- /* Teams table template */-->
+				</div>
+				<div id="footer">
+					<xsl:call-template name="footer"/>                          <!-- /* Footer template */-->
+				</div>
+			</body>
+		</html>
+	</xsl:result-document>
+    
+    <xsl:result-document href="best-players.html">                              <!-- /* Best players page render */-->
+		<xsl:call-template name="best-players"/>
+	</xsl:result-document>
+	<xsl:result-document href="top-11.html">	                            	<!-- /* Top 11 page render */-->
+		<xsl:call-template name="top-11"/>
+	</xsl:result-document>
+</xsl:template>
+```
+
+An brief example of the `en:teams` template responsible that each team have own page generated into `chunks` folder.
+
+```XML
+<xsl:template match="en:teams">
+	<h2>Teams</h2>
+	<table id="teams">
+		<tr id="teams-label">
+			<!-- /* SKIPPED: Table header labels */-->
+		</tr>
+		<xsl:for-each select="en:team">
+    
+            <!-- /* Sorted table of teams with links to the newly generated pages below */-->
+			<xsl:sort select="@id"/>
+			<tr id="teams">
+				<td><a href="chunks/{translate(en:description/en:name, $uppercase, $lowercase)}.html"><xsl:value-of select="@id"/></a></td>
+				<td><xsl:value-of select="en:description/en:short"/></td>
+				<td><xsl:value-of select="en:description/en:name"/></td>
+				<td><xsl:value-of select="en:description/en:trainer/en:name"/></td>
+				<td><xsl:value-of select="en:calculatePower(en:players)"/></td>
+			</tr>
+     
+            <!-- /* Generated page for each team */-->
+			<xsl:result-document href="chunks/{translate(en:description/en:name, $uppercase, $lowercase)}.html" format="html">
+				<html>
+					<head>
+						<title><xsl:value-of select="en:description/en:name"/></title>
+						<link rel="stylesheet" type="text/css" href="../index.css"/>
+					</head>
+					<body>
+						<!-- /* SKIPPED: Header and  watermark */-->	
+						<div id="league">
+							<xsl:apply-templates select="en:description"/>    <!-- /* Generated team description using another template */-->
+						</div>
+						<div id="teams">
+							<xsl:apply-templates select="en:players"/>        <!-- /* Generated list of players using another template */-->
+						</div>
+						<div id="footer"/>
+					</body>
+				</html>
+			</xsl:result-document>
+		</xsl:for-each>
+	</table>
+</xsl:template>
+```
 
 ### [index-fo.xsl](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index-fo.xsl)
 
