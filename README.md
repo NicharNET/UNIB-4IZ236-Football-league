@@ -66,7 +66,7 @@ I have used the Venetian Blind design.
 
 The Schematron validation is a minor and a supplementary validation file using XPath. Its only job is to assure that each team will have only and exactly one player market as a captain. A part of the overall score was the usage of a Schematron file and the captain validation is a job which suits Schematron a lot:
 
-<details><summary>Schematron</summary>
+<details><summary>Schematron (7 lines)</summary>
 
 ```XML
 <pattern id="check">
@@ -87,9 +87,9 @@ The crucial part of the semestral work is the transformation into HTML and PDF o
 
 The first transformation produces the website consisted of mutually linked HTML pages deployed on the project's [GitHub Pages](https://nicharnet.github.io/UNIB-4IZ236-Football-league) with the similar design but variable linked content.
 
-All the transformations are applied to the root element `/` and define immediately self as a template rendered to `index.html` with  to generated partial templates under the `div` containers:
+All the transformations are applied to the root element `/` and define immediately self as a template rendered to `index.html` with  to generated partial templates under the `div` containers. The sample code is followed with a brief sample of the `en:teams` template responsible that each team have own page generated into `chunks` folder:
 
-<details><summary>The root element template</summary>
+<details><summary>The root element template (31 lines)</summary>
 
 ```XML
 <xsl:template match="/">
@@ -126,10 +126,7 @@ All the transformations are applied to the root element `/` and define immediate
 ```
 </details>
 
-
-An brief example of the `en:teams` template responsible that each team have own page generated into `chunks` folder:
-
-<details><summary>The teams template</summary>
+<details><summary>The teams template (46 lines)</summary>
 
 ```XML
 <xsl:template match="en:teams">
@@ -185,9 +182,9 @@ An brief example of the `en:teams` template responsible that each team have own 
 
 On the similar principle works the transformation to PDF with a watermark. In the beginning, there is generated a table of contents with links to particular pages. Each team is rendered to the separated page. Last few pages have generated tables with the best players.
 
-This transformation is three times more verbose than the previous one because of the design redefinition since CSS can not be used to this kind of transformation. However, unlike the used elemenets, the principle is pretty identical. A breif example of a block summary of the best goalkeepers follows:
+This transformation is three times more verbose than the previous one because of the design redefinition since CSS can not be used to this kind of transformation. However, unlike the used elemenets, the principle is pretty identical. A really shortened example of a block summary of the best goalkeepers follows:
 
-<details><summary>The best goalkeepers template</summary>
+<details><summary>The best goalkeepers template (49 lines)</summary>
 	
 ```XML
 <xsl:template name="bestPlayers">
