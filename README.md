@@ -12,9 +12,9 @@ This is also my very first XSLT transformation to both HTML and PDF from 2016 an
 
 ## Input
 
-The only input is a XML file validated against a XSD file and a Schematron file.
+The only input is a  XML file.
 
-### index.xml
+### [index.xml](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.html)
 
 It's the input XML file with a root element `league` and two its descendants `detail` describing the league detail and `teams` which lists the detailed description of the team itself and all its players. A brief form appears below:
 
@@ -37,6 +37,31 @@ It's the input XML file with a root element `league` and two its descendants `de
         <!--/* Another team */ -->
     </teams>
 </league>
+```
+## Validation
+
+The only input XML file validated against both a XSD file and a Schematron file.
+
+### [index.xsd](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.xsd)
+
+This XSD file is a crucial validation file for the input XML which validates its entire structure, the allowed count and order of the particular elements and the data type and format of their values. The following list provides a selection of the most important rules (not ordered by the importance):
+
+ - A
+ - B
+ - C
+
+### [index.sch](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.sch)
+
+The Schematron validation is a minor and a supplementary validation file using XPath. Its only job is to assure that each team will have only and exactly one player market as a captain. A part of the overall score was the usage of a Schematron file and the captain validation is a job which suits Schematron a lot:
+
+```XML
+<pattern id="check">
+    <rule context="//teams/team">
+        <assert test="count(players/player[@status='captain']) = 1">
+            <!-- Error message -->
+        </assert>
+    </rule>
+</pattern>
 ```
 
 ## Transformation
