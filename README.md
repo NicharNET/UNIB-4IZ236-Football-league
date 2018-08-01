@@ -26,8 +26,6 @@ For those who haven't encountered with the following elementarz terms yet:
  - `XSD`: [XML Schema Definition](https://en.wikipedia.org/wiki/XML_Schema_(W3C)) is a specification how to formally describe the elements in an XML document.
  - `XSLT`: [Extensible Stylesheet Language Transformations](https://en.wikipedia.org/wiki/XSLT) is a language for transforming XML documents into other XML documents or other formats.
 
----
-
 ## How it works?
 
 The entire semestral work could be divided into 4 separated processes.
