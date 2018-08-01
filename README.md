@@ -4,11 +4,29 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/50efc37159ae46579add55cda74e44e7)](https://www.codacy.com/app/NicharNET/UNIB-4IZ236-Football-league?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=NicharNET/UNIB-4IZ236-Football-league&amp;utm_campaign=Badge_Grade)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/LICENSE)
 
-XSLT transformation to both HTML and PDF applied on an XML file with football league data
+## [https://nicharnet.github.io/UNIB-4IZ236-Football-league/](https://nicharnet.github.io/UNIB-4IZ236-Football-league/)
 
-### [https://nicharnet.github.io/UNIB-4IZ236-Football-league/](https://nicharnet.github.io/UNIB-4IZ236-Football-league/)
+This repository persists the files responsible XSLT transformation to both HTML and PDF applied on an XML file with football league data. It has been developed as a semestral work as a part of the course 4IZ238 XML - Theory and Practice of Markup Languages
 
-This is also my very first XSLT transformation to both HTML and PDF from 2016 and published now. The entire semestral work could be divided into 4 separated processes. 
+### Conventions
+
+ UNIB-4IZ236-Football-league 
+ - `UNI` stands for the university project
+ - `B` stands for the bachelors' project
+ - `4IZ236` stands for the university course
+ - `Football-league` stands for the semestral application/output name
+ 
+### Glossary
+
+For those who haven't encountered with the following elementarz terms yet:
+ - `HTML`: [Hypertext Markap Language](https://en.wikipedia.org/wiki/HTML) is a standard markup language for creating web pages and web applications.
+ - `XML`: [Extensible Markup Language](https://en.wikipedia.org/wiki/XML) is a markup language that defines a set of rules for encoding.
+ - `XSD`: [XML Schema Definition](https://en.wikipedia.org/wiki/XML_Schema_(W3C)) is a specification how to formally describe the elements in an XML document.
+ - `XSLT`: [Extensible Stylesheet Language Transformations](https://en.wikipedia.org/wiki/XSLT) is a language for transforming XML documents into other XML documents or other formats.
+
+_______
+
+This is also my very first XSLT transformation to both HTML and PDF from 2016 and published now. The entire semestral work could be divided into 4 separated processes.
 
 ## Input
 
