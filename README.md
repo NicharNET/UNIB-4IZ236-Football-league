@@ -6,7 +6,9 @@
 
 ## [https://nicharnet.github.io/UNIB-4IZ236-Football-league/](https://nicharnet.github.io/UNIB-4IZ236-Football-league/)
 
-This repository persists the files responsible XSLT transformation to both HTML and PDF applied on an XML file with football league data. It has been developed as a semestral work as a part of the course 4IZ238 XML - Theory and Practice of Markup Languages
+This repository persists the files responsible XSLT transformation to both HTML and PDF applied on an XML file with football league data. It has been developed as a semestral work as a part of the course 4IZ238 XML - Theory and Practice of Markup Languages. 
+
+This is also my very first XSLT transformation to both HTML and PDF from 2016 and published now. 
 
 ### Conventions
 
@@ -24,15 +26,17 @@ For those who haven't encountered with the following elementarz terms yet:
  - `XSD`: [XML Schema Definition](https://en.wikipedia.org/wiki/XML_Schema_(W3C)) is a specification how to formally describe the elements in an XML document.
  - `XSLT`: [Extensible Stylesheet Language Transformations](https://en.wikipedia.org/wiki/XSLT) is a language for transforming XML documents into other XML documents or other formats.
 
-_______
+---
 
-This is also my very first XSLT transformation to both HTML and PDF from 2016 and published now. The entire semestral work could be divided into 4 separated processes.
+## How it works?
 
-## Input
+The entire semestral work could be divided into 4 separated processes.
+
+### Input
 
 The only input is an XML file. All the names and numbers are fictional or randomly generated in the past and exclusively created by myself only.
 
-### [index.xml](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.html)
+#### [index.xml](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.html)
 
 It's the input XML file with a root element `league` and two its descendants `detail` describing the league detail and `teams` which lists the detailed description of the team itself and all its players. A brief form appears below:
 
@@ -60,11 +64,11 @@ It's the input XML file with a root element `league` and two its descendants `de
 ```
 </details>
 
-## Validation
+### Validation
 
 The only input XML file validated against both an XSD file and a Schematron file.
 
-### [index.xsd](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.xsd)
+#### [index.xsd](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.xsd)
 
 This XSD file is a validation file for the input XML which validates its entire structure, the allowed count and order of the particular elements and the data type and format of their values. The following list provides a selection of the most important rules (not ordered by the importance):
 
@@ -80,7 +84,7 @@ This XSD file is a validation file for the input XML which validates its entire 
      
 I have used the Venetian Blind design.
 
-### [index.sch](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.sch)
+#### [index.sch](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.sch)
 
 The Schematron validation is a minor and a supplementary validation file using XPath. Its only job is to assure that each team will have only and exactly one player market as a captain. A part of the overall score was the usage of a Schematron file and the captain validation is a job which suits Schematron a lot:
 
@@ -97,11 +101,11 @@ The Schematron validation is a minor and a supplementary validation file using X
 ```
 </details>
 
-## Transformation
+### Transformation
 
 The crucial part of the semestral work is the transformation into HTML and PDF output with mutually linked pages and aggregation functions. Each transformation has defined a set of functions applicable to the statistics of the players.
 
-### [index.xsl](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.xsl)
+#### [index.xsl](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.xsl)
 
 The first transformation produces the website consisted of mutually linked HTML pages deployed on the project's [GitHub Pages](https://nicharnet.github.io/UNIB-4IZ236-Football-league) with the similar design but variable linked content.
 
@@ -196,7 +200,7 @@ All the transformations are applied to the root element `/` and define immediate
 ```
 </details>
 
-### [index-fo.xsl](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index-fo.xsl)
+#### [index-fo.xsl](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index-fo.xsl)
 
 On the similar principle works the transformation to PDF with a watermark. In the beginning, there is generated a table of contents with links to particular pages. Each team is rendered to the separated page. Last few pages have generated tables with the best players.
 
@@ -257,11 +261,11 @@ This transformation is three times more verbose than the previous one because of
 ```
 </details>
 
-## Ouptut
+### Ouptut
 
 This section offers an overall view to the generated content structure.
 
-### HTML
+#### HTML
 
  - [index.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/index.html)
    - [chunks/sanha.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/chunks/sanha.html)
@@ -279,7 +283,7 @@ This section offers an overall view to the generated content structure.
  - [best-players.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/best-players.html)
  - [top-11.html](https://nicharnet.github.io/UNIB-4IZ236-Football-league/top-11.html)
 
-### PDF
+#### PDF
 
  - [index.pdf](https://github.com/NicharNET/UNIB-4IZ236-Football-league/blob/master/index.pdf)
  
