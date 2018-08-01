@@ -13,10 +13,10 @@ This is also my very first XSLT transformation to both HTML and PDF from 2016 an
 ### Conventions
 
  UNIB-4IZ236-Football-league 
- - `UNI` stands for the university project
- - `B` stands for the bachelors' project
- - `4IZ236` stands for the university course
- - `Football-league` stands for the semestral application/output name
+ - `UNI` stands for the university project which is no longer under development after the submission date.
+ - `B` stands for the bachelors' project which is published years after in the state of the submission date.
+ - `4IZ236` stands for the university course of [FIS](https://fis.vse.cz/en/).
+ - `Football-league` stands for the semestral application/output name.
  
 ### Glossary
 
