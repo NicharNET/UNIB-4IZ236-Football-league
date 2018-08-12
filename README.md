@@ -8,7 +8,7 @@
 
 The webpage is a result of XSLT transformation to both HTML applied on an XML file with football league data. It has been developed as a semestral work as a part of the course 4IZ238 XML - Theory and Practice of Markup Languages. 
 
-## [https://nicharnet.github.io/UNIB-4IZ236-Football-league/](https://nicharnet.github.io/UNIB-4IZ236-Football-league/)
+## [https://nicharnet.github.io/UNIB-4IZ236-Football-league](https://nicharnet.github.io/UNIB-4IZ236-Football-league)
 
 This is also my very first XSLT transformation to both HTML and PDF from 2016 and published now. 
 
