@@ -10,7 +10,7 @@ The webpage is a result of XSLT transformation to both HTML applied on an XML fi
 
 ## [https://nicharnet.github.io/UNIB-4IZ236-Football-league](https://nicharnet.github.io/UNIB-4IZ236-Football-league)
 
-This is also my very first XSLT transformation to both HTML and PDF from 2016 and published now. 
+This is also my very first XSLT transformation to both HTML and PDF from 2016 and published now. The webpage is hosted on GitHub Pages.
 
 ### Conventions
 
