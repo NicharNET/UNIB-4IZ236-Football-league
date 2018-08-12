@@ -22,7 +22,7 @@ This is also my very first XSLT transformation to both HTML and PDF from 2016 an
  
 ### Glossary
 
-For those who haven't encountered with the following elementarz terms yet:
+For those who haven't encountered with the following elementary terms yet:
  - `HTML`: [Hypertext Markap Language](https://en.wikipedia.org/wiki/HTML) is a standard markup language for creating web pages and web applications.
  - `XML`: [Extensible Markup Language](https://en.wikipedia.org/wiki/XML) is a markup language that defines a set of rules for encoding.
  - `XSD`: [XML Schema Definition](https://en.wikipedia.org/wiki/XML_Schema_(W3C)) is a specification how to formally describe the elements in an XML document.
