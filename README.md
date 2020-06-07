@@ -3,21 +3,13 @@
 
 <img align="left" height="113.176" width="126" top="50" src="http://i67.tinypic.com/2ly64qw.png" border="0">
 
-# 4IZ236 XML | Football league
+# Football league XSLT
 
 The webpage is a result of XSLT transformation to both HTML applied on an XML file with football league data. It has been developed as a semestral work as a part of the course 4IZ238 XML - Theory and Practice of Markup Languages. 
 
 ## [https://nikolas-charalambidis.github.io/4IZ236](https://nikolas-charalambidis.github.io/4IZ236)
 
 This is also my very first XSLT transformation to both HTML and PDF from 2016 and published now. The webpage is hosted on GitHub Pages.
-
-### Conventions
-
- UNIB-4IZ236-Football-league 
- - `UNI` stands for the university project which is no longer under development after the submission date.
- - `B` stands for the bachelors' project which is published years after in the state of the submission date.
- - `4IZ236` stands for the university course of [FIS](https://fis.vse.cz/en/).
- - `Football-league` stands for the semestral application/output name.
  
 ### Glossary
 
