@@ -3,7 +3,7 @@
 
 <img align="left" height="113.176" width="126" top="50" src="http://i67.tinypic.com/2ly64qw.png" border="0">
 
-# Football league XSLT
+# Football league
 
 The webpage is a result of XSLT transformation to both HTML applied on an XML file with football league data. It has been developed as a semestral work as a part of the course 4IZ238 XML - Theory and Practice of Markup Languages. 
 
