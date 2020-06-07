@@ -7,7 +7,7 @@
 
 The webpage is a result of XSLT transformation to both HTML applied on an XML file with football league data. It has been developed as a semestral work as a part of the course 4IZ238 XML - Theory and Practice of Markup Languages. 
 
-## [https://nikolas-charalambidis.github.io/4IZ236](https://nikolas-charalambidis.github.io/4IZ236)
+## [https://nikolas-charalambidis.github.io/football-league](https://nikolas-charalambidis.github.io/football-league)
 
 This is also my very first XSLT transformation to both HTML and PDF from 2016 and published now. The webpage is hosted on GitHub Pages.
  
